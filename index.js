@@ -133,9 +133,12 @@ Use the getFlavorByIndex function below to do the following:
   For example: running getFlavorByIndex(originalFlavors, 2) would return "Black Walnut", assuming Rainbow Sherbert has been added successfully
 */
 
-function getFlavorByIndex(/*your code here*/){
-  /*your code here*/
+function getFlavorByIndex(originalFlavors, number){
+ return originalFlavors[number]
 }
+console.log(getFlavorByIndex(originalFlavors, 2));
+
+
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
@@ -153,9 +156,18 @@ Use the removeFlavorByName function below to do the following:
   HINT: You can use .splice() for this
 */
 
-function removeFlavorByName(/*your code here*/){
-  /*your code here*/
+function removeFlavorByName(originalFlavors, flavorindex){
+  
+  
+  for(let i = 0; i < originalFlavors.length; i++){
+    if(originalFlavors[i] === flavorindex){
+      originalFlavors.splice(i, 1)
+    }
+  }
+  return originalFlavors;
 }
+console.log(removeFlavorByName(originalFlavors, "Black Walnut"));
+
 
 
 
@@ -179,9 +191,22 @@ Use the filterByWord function below to do the following:
   DO NOT USE ADVANCED ARRAY METHODS (i.e. .filter) to solve this problem. 
 */
 
-function filterByWord(/*your code here*/){
-  /*your code here*/
+function filterByWord(originalFlavors, string){
+  const banana = [];
+  for (let i = 0; i < originalFlavors.length; i++) {
+    if(originalFlavors[i].includes(string)) {
+      banana.push(originalFlavors[i]);
+    }
+  }
+  return banana;
 }
+
+
+console.log(filterByWord(originalFlavors, "Chocolate"));
+
+
+
+
 
 
 /* 💪💪💪💪💪🧁🍦🍨 STRETCH 🍨🍦🍫💪💪💪💪💪*/ 
@@ -199,6 +224,16 @@ Use the getAverageWordLength function below to do the following:
 function getAverageWordLength(/*code here*/){
   /*code here*/
 }
+
+
+
+
+
+
+
+
+
+
 
 
 /* 💪💪💪💪💪💪💪💪💪💪 STRETCH 2: 💪💪💪💪💪💪💪💪💪
